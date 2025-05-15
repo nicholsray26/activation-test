@@ -194,9 +194,34 @@
         width: 100%;
       }
     }
+    /* Default: show page content, hide maintenance message */
+.main-content {
+  display: block;
+}
+.maintenance-message {
+  display: none;
+}
+
+/* For mobile and tablets (up to 1024px) */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    display: none !important;
+  }
+  .maintenance-message {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333
   </style>
 </head>
 <body>
+
+  <!-- Main page content -->
+<div class="main-content">
   <div class="container">
     <div class="left">
       <div class="form-content">
@@ -216,7 +241,6 @@
       <img src="activate-tv.png" alt="TV Image">
     </div>
   </div>
-
   <div class="steps-grid">
     <div class="step-box">
       <h2>Step 1:</h2>
@@ -235,5 +259,19 @@
       <p>Enjoy Streaming</p>
     </div>
   </div>
+</div>
+
+<!-- Maintenance message for mobile/tablet -->
+<div class="maintenance-message">
+  <h2>We are in development phase</h2>
+  <p>The site is under maintenance on mobile and tablet view.</p>
+</div>
+
+
+
+
+
+
+
 </body>
 </html>
