@@ -76,8 +76,6 @@ html, body {
 }
 
 .form-content .btn {
-  display: block;
-  width: fit-content; 
   background-color: #000;
   color: #fff;
   padding: 14px 28px;
